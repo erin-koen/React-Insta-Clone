@@ -1,0 +1,9 @@
+.individual-comment {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.individual-comment p {
+    text-align: right;
+}

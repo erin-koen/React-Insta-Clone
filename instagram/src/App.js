@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import dummyData from './dummy-data';
-import PostContainer from './Components/PostContainer'
+import PostContainer from './Components/PostConstainer/PostContainer'
+import PropTypes from 'prop-types';
 
 class App extends Component {
   constructor() {
@@ -17,10 +18,9 @@ class App extends Component {
 
     return (
       <div>
-
-        {this.state.dummyData.map(post => {
+        {this.state.dummyData.map((post,index) => {
           return (
-            <PostContainer props={post} key={post.likes} />
+            <PostContainer post={post} key={index} />
             )
         }) }
       </div>
@@ -29,5 +29,5 @@ class App extends Component {
     );
   }
 }
-
+// The above loops through the dummyData array and sends the comments array from each object one at a time to PostContainer
 export default App;
