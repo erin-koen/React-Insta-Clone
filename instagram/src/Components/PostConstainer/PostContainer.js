@@ -4,7 +4,7 @@ import './PostContainer.css';
 import Photo from '../Photo/photo';
 import PostHeader from '../Post Header/postHeader'
 import PostLikes from '../Post Likes/PostLikes'
-import AddComment from '../AddComment/AddComment'
+
 
 function PostContainer(props){
     return(

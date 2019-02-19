@@ -7,21 +7,23 @@ class CommentSection extends Component {
     constructor(props) {
         super();
         this.state = {
-            comments: props.comments,
+            comments: props.post.comments,
             username: 'Erin',
             text: ''
         };
     
     }
     
-    addcomment = e => {
+    addComment = e => {
+        e.preventDefault();
         let newComment = {
             username: this.state.username,
             text: this.state.text,
         }
+        console.log(newComment);
         this.setState({
             comments:[...this.state.comments, newComment],
-            text:'',
+            text: '',
         });
     };
 
@@ -30,6 +32,7 @@ class CommentSection extends Component {
         this.setState({
             [e.target.name]:e.target.value
         });
+        console.log(this.state.text);
     }
 
     render(){
@@ -46,16 +49,16 @@ class CommentSection extends Component {
                   })}
               </div>
               <div>
-                  <form onSubmit ={this.state.addComment}>
+                  <form onSubmit ={this.addComment}>
                       <input
                           className="comment-input"
                           type="text"
                           name="text"
+                          value={this.state.text}  
                           placeholder="Add a comment..."
-                          value={this.state.post}
-                          onChange={this.state.handleChanges}
+                          onChange={this.handleChanges}                     
                       />
-                      <button></button>
+                      <button type="submit" onClick={this.addComment}>Add Comment</button>
                   </form>
               </div>
             </div>
