@@ -9,7 +9,7 @@ const SearchBar = () => {
             <div className="insta-logos">
                 <i className='fab fa-instagram' />
                 <div>|</div>
-                <img className="insta-font-icon" src={logo}/>
+                <img className="insta-font-icon" src={logo} alt=''/>
             </div>
             <form>
                 <input type="text" placeholder="SEARCH" />
