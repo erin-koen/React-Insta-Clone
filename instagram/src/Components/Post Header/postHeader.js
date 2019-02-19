@@ -13,17 +13,7 @@ function PostHeader(props){
 }
 
 PostHeader.propTypes = {
-    post: PropTypes.arrayOf(
-        PropTypes.shape({
-            username: PropTypes.string,
-            thumbnailUrl: PropTypes.string,
-            imageUrl: PropTypes.string,
-            likes: PropTypes.number,
-            timestamp: PropTypes.string,
-            comments: PropTypes.array,
-        })
-        
-    )
+    post: PropTypes.object,
 }
 
 export default PostHeader;

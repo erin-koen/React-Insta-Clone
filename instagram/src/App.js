@@ -10,9 +10,28 @@ class App extends Component {
     super();
     this.state = {
       dummyData: dummyData,
+      text:''
     };
   }
+  
+  AddComment = e => {
+    e.preventDefault();
+    const newComment = {
+      username: 'Erin',
+      text: this.state.text,
+    };
 
+    this.setState({
+      
+    })
+  }
+
+  handleChanges = e => {
+    e.preventDefault();
+    this.setState({
+      [e.target.name]: e.target.value
+    })
+  };
 
   render() {
 

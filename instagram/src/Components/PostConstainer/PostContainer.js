@@ -25,10 +25,6 @@ function PostContainer(props){
                 <CommentSection post={props.post} />
             </div>
 
-            <div className='post-add-comment'>
-                <AddComment post={props.post} />
-            </div>
-
         </div>
         
 

@@ -7,7 +7,7 @@ function AddComment(props){
             <input
                 className="comment-input"
                 type="text"
-                // name="comment"
+                name="text"
                 placeholder="Add a comment..."
                 // value={props.comments.text}
                 // onChange={props.handleChanges}

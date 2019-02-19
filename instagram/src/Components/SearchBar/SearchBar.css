@@ -1,0 +1,24 @@
+.search-bar-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 75px;
+    align-items: center;
+}
+.search-bar-header .insta-logos {
+    max-width: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+
+.search-bar-header .insta-logos .insta-font-icon {
+    max-width: 100px;
+}
+
+.search-bar-header i {
+    color: #444444;
+    padding: 10px;
+}

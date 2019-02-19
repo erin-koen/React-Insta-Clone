@@ -1,23 +1,32 @@
 import React from 'react';
+import './SearchBar.css';
+import logo from './instagram-1.svg';
 
 
-function SearchBar(props){
+const SearchBar = () => {
     return (
         <div className="search-bar-header">
-            <div classname="insta-logos">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><img className="insta-font-icon" /></a>
+            <div className="insta-logos">
+                <i className='fab fa-instagram' />
+                <div>|</div>
+                <img className="insta-font-icon" src={logo}/>
             </div>
             <form>
                 <input type="text" placeholder="SEARCH" />
             </form>
             <div className="profile-links">
-                <a href="#"><img className="discover-header-icon" /></a>
-                <a href="#"><img classname="liked-header-icon" /></a>
-                <a href="#"><img className="profile-header-icon" /></a>
+                <i className='fa fa-compass' />
+                <i className='fa fa-heart' />
+                <i className='fa fa-user-circle' />
             </div>
         </div>
     )
 }
 
 export default SearchBar;
+
+
+// <input type='text' placeholder='Search...' />
+// <i className='fa fa-compass' />
+// <i className='fa fa-heart' />
+// <i className='fa fa-user-circle' />
