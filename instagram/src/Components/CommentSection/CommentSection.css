@@ -1,9 +1,14 @@
 .individual-comment {
     display: flex;
-    justify-content: space-between;
-    padding: 5px;
+    justify-content: flex-start;
+
+    align-items: center;
+}
+
+.individual-comment h4 {
+    
 }
 
 .individual-comment p {
-    text-align: right;
+    margin-left: 5px;
 }

@@ -1,7 +1,12 @@
 .post-container {
-    width: 400px;
+    width: 640px;
+    margin-bottom:25px;
+    border: 1px solid lightgray;
+    padding: 10px;
 }
-
+.post-photo {
+    max-width: 100%;
+}
 .post-comments {
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }

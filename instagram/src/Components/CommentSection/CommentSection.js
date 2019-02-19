@@ -8,7 +8,7 @@ function CommentSection(props){
           {props.post.comments.map(comment => {
               return (
                 <div className='individual-comment'>
-                    <h3>{comment.username}</h3>
+                    <h4>{comment.username}</h4>
                     <p>{comment.text}</p>
                 </div>                
               );

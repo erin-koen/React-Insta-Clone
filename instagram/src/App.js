@@ -5,6 +5,7 @@ import dummyData from './dummy-data';
 import PostContainer from './Components/PostConstainer/PostContainer'
 import PropTypes from 'prop-types';
 
+
 class App extends Component {
   constructor() {
     super();
@@ -17,7 +18,7 @@ class App extends Component {
   render() {
 
     return (
-      <div>
+      <div className='app'>
         {this.state.dummyData.map((post,index) => {
           return (
             <PostContainer post={post} key={index} />
