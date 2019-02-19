@@ -48,7 +48,7 @@ class CommentSection extends Component {
                       );
                   })}
               </div>
-              <div>
+              <div className="comment-form">
                   <form onSubmit ={this.addComment}>
                       <input
                           className="comment-input"
@@ -58,7 +58,7 @@ class CommentSection extends Component {
                           placeholder="Add a comment..."
                           onChange={this.handleChanges}                     
                       />
-                      <button type="submit" onClick={this.addComment}>Add Comment</button>
+                      <button type="submit" onClick={this.addComment}>. . .</button>
                   </form>
               </div>
             </div>

@@ -3,7 +3,7 @@ import './SearchBar.css';
 import logo from './instagram-1.svg';
 
 
-const SearchBar = () => {
+const SearchBar = (props) => {
     return (
         <div className="search-bar-header">
             <div className="insta-logos">
@@ -12,7 +12,13 @@ const SearchBar = () => {
                 <img className="insta-font-icon" src={logo} alt=''/>
             </div>
             <form>
-                <input type="text" placeholder="SEARCH" />
+                <input 
+                type="text" 
+                placeholder="SEARCH BY USERNAME"
+                name="filterElement"
+                value={props.filterElement}
+                onChange={props.handleChanges}
+                 />
             </form>
             <div className="profile-links">
                 <i className='fa fa-compass' />

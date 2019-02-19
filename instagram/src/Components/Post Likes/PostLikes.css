@@ -1,3 +1,13 @@
+.like-comment-icons{
+    margin-top:15px;
+    padding-bottom: 0px;
+    
+}
+
+.fa-heart {
+    margin-right: 10px;
+}
+
 .likes {
     display: flex;
     justify-content: flex-start;
