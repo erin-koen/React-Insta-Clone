@@ -6,9 +6,10 @@
 }
 
 .individual-comment h4 {
-    
+    margin: 0;
 }
 
 .individual-comment p {
-    margin-left: 5px;
+    margin: 0 0 0 5px;
+
 }

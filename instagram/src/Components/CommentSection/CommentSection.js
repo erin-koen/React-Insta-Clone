@@ -5,9 +5,9 @@ import './CommentSection.css'
 function CommentSection(props){
     return (
       <div> 
-          {props.post.comments.map(comment => {
+          {props.post.comments.map((comment,index) => {
               return (
-                <div className='individual-comment'>
+                <div className='individual-comment' key={index}>
                     <h4>{comment.username}</h4>
                     <p>{comment.text}</p>
                 </div>                
@@ -18,9 +18,16 @@ function CommentSection(props){
     );
 }
 
-// CommentSection.propTypes = {
-//     props: PropTypes.object,
-//     props.post.comments: PropTypes.array,
-// }
-
+CommentSection.propTypes = {
+    post: PropTypes.arrayOf(
+        PropTypes.shape({
+            username: PropTypes.string,
+            imageUrl: PropTypes.string,
+            likes: PropTypes.number,
+            timestamp: PropTypes.string,
+            comments: PropTypes.array,
+        })
+        
+    )
+}
 export default CommentSection

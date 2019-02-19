@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import dummyData from './dummy-data';
 import PostContainer from './Components/PostConstainer/PostContainer'
-import PropTypes from 'prop-types';
+import SearchBar from './Components/SearchBar/SearchBar'
 
 
 class App extends Component {
@@ -19,6 +18,7 @@ class App extends Component {
 
     return (
       <div className='app'>
+        <SearchBar />
         {this.state.dummyData.map((post,index) => {
           return (
             <PostContainer post={post} key={index} />

@@ -4,7 +4,7 @@ import './PostLikes.css';
 
 function PostLikes(props){
     return (
-        <div classname='likes'>
+        <div className='likes'>
             <h4>{props.post.likes} likes</h4>
         </div>
     );

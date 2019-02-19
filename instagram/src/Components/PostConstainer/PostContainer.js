@@ -1,10 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import CommentSection from '../CommentSection/CommentSection';
 import './PostContainer.css';
 import Photo from '../Photo/photo';
 import PostHeader from '../Post Header/postHeader'
 import PostLikes from '../Post Likes/PostLikes'
+import AddComment from '../AddComment/AddComment'
 
 function PostContainer(props){
     return(
@@ -25,9 +25,9 @@ function PostContainer(props){
                 <CommentSection post={props.post} />
             </div>
 
-            {/* <div classname='add-comment'>
-                <AddCom />mentForm
-            </div> */}
+            <div className='post-add-comment'>
+                <AddComment post={props.post} />
+            </div>
 
         </div>
         
