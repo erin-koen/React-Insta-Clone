@@ -4,6 +4,7 @@ import logo from './instagram-1.svg';
 
 
 const SearchBar = (props) => {
+
     return (
         <div className="search-bar-header">
             <div className="insta-logos">
@@ -11,7 +12,7 @@ const SearchBar = (props) => {
                 <div>|</div>
                 <img className="insta-font-icon" src={logo} alt=''/>
             </div>
-            <form>
+            <form onChange={props.filterResults}>
                 <input 
                 type="text" 
                 placeholder="SEARCH BY USERNAME"

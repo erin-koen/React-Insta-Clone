@@ -27,14 +27,17 @@ class App extends Component {
     }
   }
 
-  // filterResults = e => {
-  //   e.preventDefault();
-  //   if (filterELement === ''){
-  //     this.setState({ postData: dummyData })
-  //   } else {
-  //     let filteredResults = this.state.postData.filter(post => post.includes([this.state.filterElement])
-  //   }
-  // }
+  filterResults = e => {
+    e.preventDefault();
+    if (this.state.filterElement === ''){
+      this.setState({ postData: dummyData })
+    } else {
+      let filteredResults = this.state.postData.filter(post => post.username.includes(this.state.filterElement))
+      this.setState({
+        postData: filteredResults
+      });
+    }
+  }
 
     handleChanges = e => {
       e.preventDefault();
@@ -50,7 +53,7 @@ class App extends Component {
   render() {
     return (
       <div className="app"> 
-        <SearchBar posts={this.state.postData} />
+        <SearchBar posts={this.state.postData} filterElement ={this.state.filterElement} handleChanges={this.handleChanges} filterResults={this.filterResults} />
         {this.state.postData.map((post,index)=> {
           return (
             <PostContainer post={post} key={index} />
