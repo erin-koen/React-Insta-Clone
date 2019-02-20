@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import dummyData from './Components/dummy-data';
 import PostPage from './Components/PostConstainer/PostPage'
+import authenticate from '../src/authentication/aunthenticate'
+import Login from './Components/Login/Login'
 
 
 class App extends Component {
@@ -49,7 +51,7 @@ class App extends Component {
     
 }
 
-export default App;
+export default authenticate(App)(Login);
 
 
  

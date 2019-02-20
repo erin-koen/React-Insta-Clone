@@ -4,7 +4,7 @@ import PostContainer from './PostContainer';
 import SearchBar from '../SearchBar/SearchBar';
 
 class PostPage extends Component {
-    constructor(props){
+    constructor(){
         super();
         this.state = {
             postData: [],
@@ -42,7 +42,7 @@ class PostPage extends Component {
         this.setState({
             [e.target.name]:e.target.value
         });
-        console.log(this.state.filterElement);
+
     }
   
 
