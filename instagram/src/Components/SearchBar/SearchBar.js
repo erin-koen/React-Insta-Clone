@@ -12,7 +12,7 @@ const SearchBar = (props) => {
                 <div>|</div>
                 <img className="insta-font-icon" src={logo} alt=''/>
             </div>
-            <form onChange={props.filterResults}>
+            <form onChange={props.filterResults} onSubmit={props.filterResults}>
                 <input 
                 type="text" 
                 placeholder="SEARCH BY USERNAME"

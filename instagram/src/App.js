@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import dummyData from './dummy-data';
-import PostContainer from './Components/PostConstainer/PostContainer'
-import SearchBar from './Components/SearchBar/SearchBar'
+import dummyData from './Components/dummy-data';
+import PostPage from './Components/PostConstainer/PostPage'
 
 
 class App extends Component {
@@ -14,18 +13,7 @@ class App extends Component {
     };
   }
 
-  componentDidMount(){
-    this.setState({ postData: dummyData });
-    console.log(this.state.postData)
-  }
-
-  shouldComponentUpdate(prevState) {
-    if (prevState.postData !== this.state.postData){
-      return true;
-    } else{
-      return false;
-    }
-  }
+  
 
   filterResults = e => {
     e.preventDefault();
@@ -53,12 +41,7 @@ class App extends Component {
   render() {
     return (
       <div className="app"> 
-        <SearchBar posts={this.state.postData} filterElement ={this.state.filterElement} handleChanges={this.handleChanges} filterResults={this.filterResults} />
-        {this.state.postData.map((post,index)=> {
-          return (
-            <PostContainer post={post} key={index} />
-          )
-        })}
+        <PostPage />
       </div>
     );
   }
