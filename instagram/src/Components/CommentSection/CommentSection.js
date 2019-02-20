@@ -29,8 +29,11 @@ class CommentSection extends Component {
 
     handleChanges = e => {
         e.preventDefault();
+        let tempUserName = localStorage.getItem('username');
         this.setState({
-            [e.target.name]:e.target.value
+            username: tempUserName,
+            [e.target.name]:e.target.value,
+            
         });
         console.log(this.state.text);
     }

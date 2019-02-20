@@ -14,7 +14,7 @@ class PostPage extends Component {
 
     componentDidMount(){
         this.setState({ postData: dummyData });
-        console.log(this.state.postData)
+        
       }
     
       shouldComponentUpdate(prevState) {
