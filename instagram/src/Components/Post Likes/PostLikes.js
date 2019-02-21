@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './PostLikes.css';
 import styled from 'styled-components'
 
 const FeedBackContainer = styled.div`

@@ -57,9 +57,9 @@ class PostPage extends Component {
                     handleChanges={this.handleChanges}
                     filterResults={this.filterResults}
                 />
-                {this.state.postData.map((post,index)=> {
+                {this.state.postData.map((post)=> {
                     return (
-                    <PostContainer post={post} key={index} />
+                    <PostContainer post={post} key={post.timestamp} />
                     )
                 })}
             </React.Fragment>

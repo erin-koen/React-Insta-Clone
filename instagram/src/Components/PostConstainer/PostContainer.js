@@ -1,6 +1,5 @@
 import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
-import './PostContainer.css';
 import Photo from '../Photo/photo';
 import PostHeader from '../Post Header/postHeader';
 import PostLikes from '../Post Likes/PostLikes';
@@ -12,25 +11,46 @@ const PostContainerDiv = styled.div`
     border: 1px solid lightgray;
 `
 
+const PostHeaderDiv = styled.div`
+    padding: 15px;
+`
+
+const PostPhotoDiv = styled.div`
+    max-width: 100%;
+`
+
+const PostLikesDiv = styled.div`
+    padding: 0 15px 5px 15px;
+
+`
+
+const PostCommentsDiv = styled.div`
+    padding: 0 15px 5px 15px;
+    border-bottom: .50px solid lightgrey;
+`
+
+
 
 function PostContainer(props){
     return(
         <PostContainerDiv>
-            <div>
+            
+            <PostHeaderDiv>
                 <PostHeader classname='post-header' post={props.post} />
-            </div>
-                
-            <div className='post-photo'>
+            </PostHeaderDiv>
+            
+            <PostPhotoDiv>
                 <Photo post={props.post} />
-            </div>
-
-            <div className='post-likes'>
+            </PostPhotoDiv>
+            
+            <PostLikesDiv>
                 <PostLikes post={props.post} />
-            </div>
-
-            <div className='post-comments'>
+            </PostLikesDiv>
+            
+            <PostCommentsDiv>
                 <CommentSection post={props.post} />
-            </div>
+            </PostCommentsDiv>
+
         </PostContainerDiv>     
     );
 }
