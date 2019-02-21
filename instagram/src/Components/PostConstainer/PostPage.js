@@ -27,6 +27,7 @@ class PostPage extends Component {
 
     filterResults = e => {
         e.preventDefault();
+        console.log(this.state.filterElement);
         if (this.state.filterElement === ''){
         this.setState({ postData: dummyData })
         } else {
@@ -42,10 +43,10 @@ class PostPage extends Component {
         this.setState({
             [e.target.name]:e.target.value
         });
-
+        
     }
   
-
+    
   
 
     render() {

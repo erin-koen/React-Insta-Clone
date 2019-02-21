@@ -54,6 +54,13 @@ const ProfileLinks = styled.div`
 
 const SearchBar = (props) => {
 
+    // function handleThenFilter() {
+    //     props.handleChanges()
+    //     props.filterElement();
+    // }
+    // I thought maybe I could combine call both of these functions onChange in the input, and it would then update the search results with each keystroke. I couldn't really get the syntax right, but am going to try again this weekend. 
+        
+
     return (
         <SearchHeader>
             <InstaLogoContainer>
@@ -61,7 +68,7 @@ const SearchBar = (props) => {
                 <div><p></p></div>
                 <img className="insta-font-icon" src={logo} alt=''/>
             </InstaLogoContainer>
-            <SearchForm onChange={props.filterResults} onSubmit={props.filterResults}>
+            <SearchForm  onSubmit={props.filterResults}>
                 <input 
                     type="text" 
                     placeholder="SEARCH BY USERNAME"

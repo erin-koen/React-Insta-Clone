@@ -93,9 +93,9 @@ class CommentSection extends Component {
                         );
                     })} 
                 </div>
-              <div>
+              {/* <div>
                   {moment(this.state.timestamp).fromNow()}
-              </div>
+              </div> */}
               <CommentForm onSubmit={this.addComment}>
                     <input
                         className="comment-input"
