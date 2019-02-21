@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './postHeader.css';
+
 import styled from 'styled-components';
+import Username from '../Styles-Reusables/styles-reusables'
 
 const StyledPostHeader = styled.div`
     display: flex;
@@ -21,7 +22,7 @@ function PostHeader(props){
     return(
         <StyledPostHeader>
             <img src={`${props.post.thumbnailUrl}`} alt=''></img> 
-            <h4>{props.post.username}</h4>
+            <Username bold>{props.post.username}</Username>
         </StyledPostHeader>
     )
 }

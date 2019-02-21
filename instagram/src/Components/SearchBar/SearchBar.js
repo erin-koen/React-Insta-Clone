@@ -1,5 +1,5 @@
 import React from 'react';
-import './SearchBar.css';
+// import './SearchBar.css';
 import logo from './iglogo.png';
 import styled from 'styled-components';
 
@@ -10,6 +10,10 @@ const SearchHeader = styled.div`
     width: 100%;
     height: 75px;
     align-items: center;
+
+    i {
+        color: #444444;
+    }
 `;
  
 const InstaLogoContainer = styled.div`

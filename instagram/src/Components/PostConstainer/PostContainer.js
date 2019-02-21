@@ -6,12 +6,16 @@ import PostHeader from '../Post Header/postHeader';
 import PostLikes from '../Post Likes/PostLikes';
 import styled from 'styled-components';
 
-
+const PostContainerDiv = styled.div`
+    width: 640px;
+    margin-bottom:25px;
+    border: 1px solid lightgray;
+`
 
 
 function PostContainer(props){
     return(
-        <div className='post-container'>
+        <PostContainerDiv>
             <div>
                 <PostHeader classname='post-header' post={props.post} />
             </div>
@@ -27,11 +31,7 @@ function PostContainer(props){
             <div className='post-comments'>
                 <CommentSection post={props.post} />
             </div>
-
-        </div>
-        
-
-        
+        </PostContainerDiv>     
     );
 }
 
